@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+<head>
+    <title>Amazon-Clone</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <header class="header">
+            <nav class="navbar">
+                <div class="top-nav">
+                    <img src="download.png" alt="" class="logo">
+                    <div class="location">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <div class="text">
+                            <p>Delivering to Kolkata 700001</p>
+                            <h4>Update location</h4>
+                        </div>
+                    </div>
+                    <div class="search-bar">
+                        <select name="" id="select-category">
+                            <option value="all">All</option>
+                            <option value="accessories">Accessories</option>
+                        </select>
+                        <input type="text" class="search" placeholder="Search Amazon.in"></input>
+                        <i class="fa-solid fa-magnifying-glass" id="search-icon"></i>
+                    </div>
+                    <select name="" class="language">
+                        <option value="english">En</option>
+                        <option value="hindi">Hi</option>
+                    </select>
+                    <div class="sign-in">
+                        <p>Hello, sign in</p>
+                        <h4>Account & Lists <i class="fa-solid fa-caret-down"></i></h4>
+                    </div>
+                    <div class="return-order">
+                        <p>Return</p>
+                        <h4>& Orders</h4>
+                    </div>
+                    <div class="cart">
+                        <i class="fa-solid fa-cart-shopping" id="cart"></i>
+                        <p>Cart</p>
+                    </div>
+                </div>
+
+                <div class="bottom-nav">
+                    <div class="all">
+                        <i class="fa-solid fa-bars"></i>
+                        <p>All</p>
+                    </div>
+                    <div class="nav-items">
+                        <p class="nav-item">Amazon miniTv</p>
+                        <p class="nav-item">Sell</p>
+                        <p class="nav-item">Best Sellers</p>
+                        <p class="nav-item">Today's Deals</p>
+                        <p class="nav-item">Mobiles</p>
+                        <p class="nav-item">Electronics</p>
+                    </div>
+                    <a
+                        href="https://www.amazon.in/minitv/tp/7ee5c405-c05c-448a-a587-1361cce89885?_encoding=UTF8&dplnk=mIngress&mtv_pt=gateway&refMarker=avod_SWM_CrimesAajKal&ref_=nav_swm_avod_SWM_CrimesAajKal&pf_rd_p=aba2c6f7-333e-40ee-a352-5ae242558a90&pf_rd_s=nav-sitewide-msg&pf_rd_t=4201&pf_rd_i=navbar-4201&pf_rd_m=A21TJRUUN4KGV&pf_rd_r=SP5S2HP9C4HFCKH1HKJF">
+                        <img src="amazon_logo.png" alt="" class="mini-tv-ad">
+                    </a>
+                </div>
+            </nav>
+        </header>
+
+        <section class="carousel-container">
+            <div class="carousel">
+                <div class="carousel-slides">
+                    <a class="slide"
+                        href="https://www.amazon.in/b/?_encoding=UTF8&node=27394885031&pd_rd_w=ug3ti&content-id=amzn1.sym.174007fc-f80a-40c6-880d-5fd3bc8a636a&pf_rd_p=174007fc-f80a-40c6-880d-5fd3bc8a636a&pf_rd_r=X5JGF44BD6RMQABM8Z4R&pd_rd_wg=3k5ZN&pd_rd_r=d2d9ea2a-a488-4252-bb05-43aa524de012">
+                        <img src="https://images-eu.ssl-images-amazon.com/images/G/31/img23/PB/JAN/JanArt_DesktopHeroTemplate_3000x1200_23Nov2023._CB585937324_.jpg"
+                            alt="">
+                    </a>
+                    <a class="slide"
+                        href="https://www.amazon.in/l/93713843031/?_encoding=UTF8&pd_rd_w=46Oec&content-id=amzn1.sym.65d40622-d227-40ec-892c-8e2660bf0bc7&pf_rd_p=65d40622-d227-40ec-892c-8e2660bf0bc7&pf_rd_r=X5JGF44BD6RMQABM8Z4R&pd_rd_wg=3k5ZN&pd_rd_r=d2d9ea2a-a488-4252-bb05-43aa524de012">
+                        <img src="https://images-eu.ssl-images-amazon.com/images/G/31/IMG23/Suma/JanART/Hero/revised/D110016523_IN_HE_TV_JanART24_Teaser_Savings-up-to-40000_JanArt_DesktopHeroTemplate_3000x1200_V3._CB585941424_.jpg"
+                            alt="">
+                    </a>
+                    <a class="slide"
+                        href="https://www.amazon.in/b/?_encoding=UTF8&node=27394885031&pd_rd_w=ug3ti&content-id=amzn1.sym.174007fc-f80a-40c6-880d-5fd3bc8a636a&pf_rd_p=174007fc-f80a-40c6-880d-5fd3bc8a636a&pf_rd_r=X5JGF44BD6RMQABM8Z4R&pd_rd_wg=3k5ZN&pd_rd_r=d2d9ea2a-a488-4252-bb05-43aa524de012">
+                        <img src="https://images-eu.ssl-images-amazon.com/images/G/31/img24/Consumables/JanART/GW/Unrec_PC_Hero_3000x1200._CB585934801_.jpg"
+                            alt="">
+                    </a>
+                    <a class="slide"
+                        href="https://www.amazon.in/b/?_encoding=UTF8&node=27394885031&pd_rd_w=ug3ti&content-id=amzn1.sym.174007fc-f80a-40c6-880d-5fd3bc8a636a&pf_rd_p=174007fc-f80a-40c6-880d-5fd3bc8a636a&pf_rd_r=X5JGF44BD6RMQABM8Z4R&pd_rd_wg=3k5ZN&pd_rd_r=d2d9ea2a-a488-4252-bb05-43aa524de012">
+                        <img src="https://images-eu.ssl-images-amazon.com/images/G/31/OHL/23/Central/BAU/JanART/Leadup/1/PC_2x._CB585940568_.jpg"
+                            alt="">
+                    </a>
+                </div>
+                <div class="controls">
+                    <a class="prev" onclick="plusSlides(-1)">
+                        <span><i class="fa-solid fa-angle-left"></i></span>
+                    </a>
+                    <a class="next" onclick="plusSlides(1)">
+                        <span><i class="fa-solid fa-angle-right"></i></span>
+                    </a>
+                </div>
+                
+            </div>
+        </section>
+
+        <div class="products-section">
+            <div class="small-grids">
+                <div class="grid">
+                    <h4 class="grid-heading">Starting Rs99 | All your home improvement needs</h4>
+                    <div class="grid-items">
+                        <div class="grid-top-items">
+                            <a href="">
+                                <img src="https://picsum.photos/200" alt="item-image">
+                                <p class="item-desc">Mobile, Electronics & much more</p>
+                            </a>
+                            <a href="">
+                                <img src="https://picsum.photos/200" alt="item-image">
+                                <p class="item-desc">Mobile, Electronics & much more</p>
+                            </a>
+                        </div>
+                        <div class="grid-bottom-items">
+                            <a href="">
+                                <img src="https://picsum.photos/200" alt="item-image">
+                                <p class="item-desc">Mobile, Electronics & much more</p>
+                            </a>
+                            <a href="">
+                                <img src="https://picsum.photos/200" alt="item-image">
+                                <p class="item-desc">Mobile, Electronics & much more</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid">
+                    <h4 class="grid-heading">Starting Rs99 | All your home improvement needs</h4>
+                    <div class="grid-items">
+                        <div class="grid-top-items">
+                            <a href="">
+                                <img src="https://picsum.photos/200" alt="item-image">
+                                <p class="item-desc">Mobile, Electronics & much more</p>
+                            </a>
+                            <a href="">
+                                <img src="https://picsum.photos/200" alt="item-image">
+                                <p class="item-desc">Mobile, Electronics & much more</p>
+                            </a>
+                        </div>
+                        <div class="grid-bottom-items">
+                            <a href="">
+                                <img src="https://picsum.photos/200" alt="item-image">
+                                <p class="item-desc">Mobile, Electronics & much more</p>
+                            </a>
+                            <a href="">
+                                <img src="https://picsum.photos/200" alt="item-image">
+                                <p class="item-desc">Mobile, Electronics & much more</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="grid">
+                    <h4 class="grid-heading">Starting Rs99 | All your home improvement needs</h4>
+                    <div class="grid-items">
+                        <div class="grid-top-items">
+                            <a href="">
+                                <img src="https://picsum.photos/200" alt="item-image">
+                                <p class="item-desc">Mobile, Electronics & much more</p>
+                            </a>
+                            <a href="">
+                                <img src="https://picsum.photos/200" alt="item-image">
+                                <p class="item-desc">Mobile, Electronics & much more</p>
+                            </a>
+                        </div>
+                        <div class="grid-bottom-items">
+                            <a href="">
+                                <img src="https://picsum.photos/200" alt="item-image">
+                                <p class="item-desc">Mobile, Electronics & much more</p>
+                            </a>
+                            <a href="">
+                                <img src="https://picsum.photos/200" alt="item-image">
+                                <p class="item-desc">Mobile, Electronics & much more</p>
+                            </a>
+                        </div>
+                    </div>
+                </div> -->
+                <div class="grid">
+                    <h4 class="grid-heading">Starting Rs99 | All your home improvement needs</h4>
+                    <div class="grid-items">
+                        <div class="grid-top-items">
+                            <a href="">
+                                <img src="https://picsum.photos/200" alt="item-image">
+                                <p class="item-desc">Mobile, Electronics & much more</p>
+                            </a>
+                            <a href="">
+                                <img src="https://picsum.photos/200" alt="item-image">
+                                <p class="item-desc">Mobile, Electronics & much more</p>
+                            </a>
+                        </div>
+                        <div class="grid-bottom-items">
+                            <a href="">
+                                <img src="https://picsum.photos/200" alt="item-image">
+                                <p class="item-desc">Mobile, Electronics & much more</p>
+                            </a>
+                            <a href="">
+                                <img src="https://picsum.photos/200" alt="item-image">
+                                <p class="item-desc">Mobile, Electronics & much more</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="long-grid"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
