@@ -30,7 +30,7 @@ p, h4{
 .header h4{
     font-size: 0.9rem;
 }
-/*heh*/
+
 .header{
     width: 100%;
     margin: 0;
@@ -178,6 +178,97 @@ p, h4{
     margin-left: 0.5rem;
 }
 
+#overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Adjust the alpha value for darkness */
+    z-index: 1;
+}
+
+#location-box{
+    width: 350px;
+    height: 250px;
+    display:none;
+    flex-direction: column;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border: none;
+    border-radius: 7px;
+    box-shadow: #232b33 10px;
+    z-index: 1;
+    background-color: white;
+    align-items: center;
+}
+
+#loc-head{
+    width: 100%;
+    margin: 0;
+    padding: 20px;   
+    text-align: left;
+    background-color: rgb(222, 237, 242);
+    border-bottom:1px solid rgb(207, 207, 207);
+    border-radius: 7px 7px 0 0;
+}
+
+#location-box p{
+    padding: 20px;
+    font-size: 12px;
+    color: rgb(101, 101, 101);
+}
+
+#see-address{
+    padding: 10px;
+    width: 310px;
+    display: flex;
+    justify-content: center;
+    background-color: yellow;
+    border: none;
+    border-radius: 8px;
+    margin: 0 auto;
+}
+
+#legend-hr {
+   margin: 0 auto;
+   width:300px;
+   text-align: center;
+   border:none;
+   border-top: 1px solid rgb(152, 151, 151);
+   margin-top: 10px;
+   font-size: 11px;
+   color:rgb(99, 96, 96);
+}
+
+#legend-hr-text {
+    padding: 0 10px;
+}
+
+.enter-pin{
+    display: flex;
+    width: 300px;
+    margin: 0 auto;
+}
+
+.enter-pin input{
+    border:1px solid rgb(163, 163, 163);
+    border-radius: 4px;
+    height: 30px;
+    width: 220px;
+}
+
+.enter-pin button{
+    margin-left: 10px;
+    width: 80px;
+    border-radius: 7px;
+    border:1px solid rgb(214, 214, 214);
+    background-color: white;
+}
+
 /*Bottom-navbar*/
 
 .bottom-nav{
@@ -232,6 +323,7 @@ p, h4{
     display: flex;
     transition: transform 0.5s ease-in-out;
     align-items: center;
+    position: relative;
 }
 
 .carousel-slides {
@@ -249,7 +341,7 @@ p, h4{
     position: absolute;
     width: auto;
     padding:2rem;
-    top: 50%;
+    top: 40%;
     color: white;
     font-weight: bold;
     font-size: 30px;
@@ -258,18 +350,24 @@ p, h4{
 }
 
 .controls{
-    align-items: center;
     display: flex;
+    position:absolute;
     flex-direction: row;
+    width: 100%;
+    align-items: center;
     justify-content: space-between;
 }
 
 .prev {
     left: 10%;
+    top: -10%;
+    transform: translateY(-100%);
 }
 
 .next {
     right: 10%;
+    top: -10%;
+    transform: translateY(-100%);
 }
 
 .prev:hover, .next:hover {
@@ -295,8 +393,9 @@ p, h4{
     margin: 0 auto;
     padding: 0 auto;
     height: 25rem; 
-    max-width: 1245px;
+    max-width: 100%; 
     overflow: hidden;
+    height: auto;
 }
 
 .grid{
@@ -304,8 +403,10 @@ p, h4{
     flex-direction: column;
     background-color: #fff;
     margin: 0 0.5rem;
-    width: 300px;
+    max-width: 300px;
     padding: 1rem;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .grid-heading{
@@ -337,8 +438,8 @@ p, h4{
 }
 
 .grid-top-items img,.grid-bottom-items img{
-    width: 120px;
-    height: 100px;
+    width: 100%; /* Make images responsive */
+    height: auto; /* Maintain aspect ratio*/
 }
 
 
@@ -354,6 +455,7 @@ p, h4{
 }
  
 .long-grid{
+    position: relative; 
     margin: 20px 0;
     width: 100%;
     padding: 20px;
@@ -386,37 +488,37 @@ p, h4{
 }
 
 .carousel-wrapper{
-   display: flex;
-   gap: 15px;
-   transition: transform 0.5s ease-in-out; 
-   overflow-x: scroll;
-   flex-wrap: nowrap;
-   overflow: visible;
-}
-
-.carousel-item-box{
     display: flex;
-    flex-direction: column;
+    gap: 15px;
+    transition: transform 0.5s ease-in-out; 
+    overflow-x: scroll;
     flex-wrap: nowrap;
-    min-width: 200px;
-    text-decoration: none;
-    margin: 0 auto;
     overflow: visible;
-}
-
-.carousel-item{
-    min-width: 150px;
-    height: auto;
-    background-color: rgb(236, 243, 255);
-    border-radius: 5px;
-    margin-bottom: 10px;
-}
-
-.carousel-item img{
-    width: 100%;
-    height: auto;
-    padding: 20px;
-}
+ }
+ 
+ .carousel-item-box{
+     display: flex;
+     flex-direction: column;
+     flex-wrap: nowrap;
+     min-width: 200px;
+     text-decoration: none;
+     margin: 0 auto;
+     overflow: visible;
+ }
+ 
+ .carousel-item{
+     min-width: 150px;
+     height: auto;
+     background-color: rgb(236, 243, 255);
+     border-radius: 5px;
+     margin-bottom: 10px;
+ }
+ 
+ .carousel-item img{
+     width: 100%;
+     height: auto;
+     padding: 20px;
+ }
 
 .carousel-btn {
     position: absolute;
@@ -438,11 +540,11 @@ p, h4{
 }
 
 .prev-button{
-    left: 16px;
+    left: 20px;
 }
 
 .next-button {
-    right: 16px;
+    right: 20px;
 }
 
 .item-discount{

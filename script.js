@@ -26,7 +26,6 @@ function showSlides(n) {
 
 // Second carousel code (long grid)
 const carouselWrapper = document.getElementById("carousel-wrapper");
-// const carouselWrapper1 = document.getElementById("carousel-wrapper1");
 const totalItems = document.querySelectorAll(".carousel-item").length;
 let currentIndex = 0;
 const itemsPerFrame = 5;
@@ -50,11 +49,22 @@ function updateCarousel() {
     const translateValue = -currentIndex * (100 / itemsPerFrame) + '%';
     carouselWrapper.style.transform = 'translateX(' + translateValue + ')';
 }
-// function updateCarousel1() {
-//   const translateValue = -currentIndex * (100 / itemsPerFrame) + '%';
-//   carouselWrapper1.style.transform = 'translateX(' + translateValue + ')';
-// }
-// function updateCarousel() {
-//   const translateValue = -currentIndex * 100 + "%";
-//   carouselWrapper.style.transform = "translateX(" + translateValue + ")";
-// }
+
+// location onclick()
+document.addEventListener("DOMContentLoaded",function(){
+document.getElementById('location').addEventListener('click',openLocationBox)
+
+function openLocationBox(){
+  document.getElementById('overlay').style.display = 'block';
+  document.getElementById('location-box').style.display="block";
+}
+
+window.addEventListener('click',function(e){
+  var locationBox=document.getElementById('location-box');
+  var overlay = document.getElementById('overlay');
+        if (e.target === overlay || e.target === locationBox) {
+            locationBox.style.display = 'none';
+            overlay.style.display = 'none';
+        }
+})
+})

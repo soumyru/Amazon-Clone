@@ -10,12 +10,14 @@
 </head>
 
 <body>
+    <div id="overlay"></div>
+
     <div class="container">
         <header class="header" id="header">
             <nav class="navbar">
                 <div class="top-nav">
                     <img src="download.png" alt="" class="logo">
-                    <div class="location">
+                    <div class="location" id="location">
                         <i class="fa-solid fa-location-dot"></i>
                         <div class="text">
                             <p>Delivering to Kolkata 700001</p>
@@ -68,7 +70,20 @@
                 </div>
             </nav>
         </header>
-
+        
+        <div id="location-box">
+            <h3 id="loc-head">Choose your location</h3>
+            <p>Select a delivery location to see product availabilty and delivery options</p>
+            <button id="see-address">Sign in to see your address</button>
+            <fieldset id="legend-hr">
+                <legend id="legend-hr-text">or enter an Indian pincode</legend>
+            </fieldset>
+            <div class="enter-pin">
+            <input type="text">
+            <button >Apply</button>
+            </div>
+        </div>
+        
         <section class="carousel-container">
             <div class="carousel">
                 <div class="carousel-slides">
