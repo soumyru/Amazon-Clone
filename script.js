@@ -50,10 +50,10 @@ function updateCarousel() {
     carouselWrapper.style.transform = 'translateX(' + translateValue + ')';
 }
 
-// location onclick()
 document.addEventListener("DOMContentLoaded",function(){
-document.getElementById('location').addEventListener('click',openLocationBox)
-
+  
+  // location onclick()
+  document.getElementById('location').addEventListener('click',openLocationBox)
 function openLocationBox(){
   document.getElementById('overlay').style.display = 'block';
   document.getElementById('location-box').style.display="block";
@@ -67,4 +67,11 @@ window.addEventListener('click',function(e){
             overlay.style.display = 'none';
         }
 })
+
+//search hover
+document.getElementById('search').addEventListener('click',function(e){
+document.getElementById('overlay').style.display="block";
+document.getElementById('search-bar').style.border="2px solid orange";
+});
+
 })
